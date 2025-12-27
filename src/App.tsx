@@ -1,6 +1,8 @@
 import LandingSection from "./sections/LandingSection";
 import BeforePresidency from "./sections/BeforePresidency";
-import StatisticsSection from "./sections/StatisticsSection";
+import StatisticsSection1 from "./sections/StatisticsSection1";
+import StatisticsSection2 from "./sections/StatisticsSection2";
+import StatisticsSection3 from "./sections/StatisticsSection3";
 import ICCSection from "./sections/ICCSection";
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
     <>
       <LandingSection />
       <BeforePresidency />
-      <StatisticsSection />
+      <StatisticsSection1 />
+      <StatisticsSection2 />
+      <StatisticsSection3 />
       <ICCSection />
     </>
   );
