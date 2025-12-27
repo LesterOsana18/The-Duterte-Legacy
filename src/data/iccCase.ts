@@ -16,7 +16,7 @@ export const iccCase: SectionData = {
     },
     {
       label: "Charges",
-      value: "Crimes against humanity (murder)"
+      value: "Crimes against humanity"
     },
     {
       label: "Representative Killings Cited",

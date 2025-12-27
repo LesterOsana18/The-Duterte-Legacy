@@ -7,8 +7,7 @@ const StatisticsSection2 = () => {
       {/* Frosted glass effect with blur */}
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
 
-      <div className="relative max-w-5xl mx-auto grid grid-cols-2 gap-4 text-center bg-black/70 px-8 py-12 rounded-lg items-center">
-        {/* Left: Government Figures + Divider */}
+      <div className="relative max-w-5xl mx-auto grid grid-cols-2 gap-4 text-center bg-black/70 px-8 py-12 rounded-lg items-center hover:scale-105 transition-all shadow-lg shadow-black">        {/* Left: Government Figures + Divider */}
         <div className="flex flex-col justify-center items-center border-r border-red-700 pr-8">
           <h4 className="uppercase text-gray-400 mb-2">
             Government Figures
