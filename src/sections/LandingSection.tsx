@@ -1,7 +1,7 @@
 const LandingSection = () => {
   const handleScroll = () => {
     document
-      .getElementById("statistics")
+      .getElementById("before-presidency")
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -35,11 +35,17 @@ const LandingSection = () => {
         >
           Read More
         </button>
-
-        <p className="mt-6 text-sm md:text-base text-gray-300 font-montserrat"> 
-          Human Rights Watch
-        </p>
       </div>
+
+      <a 
+        href="https://www.hrw.org/news/2017/09/07/philippine-president-rodrigo-dutertes-war-drugs"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute mb-4 mr-4 bottom-4 right-4 text-sm md:text-base text-gray-300 font-montserrat hover:underline transition"
+        style={{ zIndex: 20 }}
+      >
+        Human Rights Watch
+      </a>
     </section>
   );
 };
