@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 @import "tailwindcss";
+
+@theme {
+  --font-oswald: Oswald, sans-serif;
+  --font-montserrat: Montserrat, sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-oswald);
+  }
+
+  body {
+    font-family: var(--font-montserrat);
+  }
+}
