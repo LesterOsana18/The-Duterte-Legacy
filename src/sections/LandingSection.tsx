@@ -38,10 +38,10 @@ const LandingSection = () => {
       </div>
 
       <a 
-        href="https://www.hrw.org/news/2017/09/07/philippine-president-rodrigo-dutertes-war-drugs"
+        href="https://www.hrw.org/news/2017/09/07/philippine-president-rodrigo-dutertes-war-drugs#:~:text=%E2%80%9CIf%20I%20make%20it%20to%20the%20presidential%20palace%2C%E2%80%9D%20he%20said%2C%20%E2%80%9CI%20will%20do%20just%20what%20I%20did%20as%20mayor.%20You%20drug%20pushers%2C%20holdup%20men%2C%20and%20do%2Dnothings%2C%20you%20better%20get%20out%20because%20I%E2%80%99ll%20kill%20you.%E2%80%9D"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute mb-4 mr-4 bottom-4 right-4 text-sm md:text-base text-gray-300 font-montserrat hover:underline transition"
+        className="absolute mb-4 mr-4 bottom-4 right-4 text-xs md:text-sm text-gray-300 font-montserrat hover:underline transition"
         style={{ zIndex: 20 }}
       >
         Human Rights Watch
