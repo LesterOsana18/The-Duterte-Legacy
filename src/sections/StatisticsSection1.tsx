@@ -83,7 +83,7 @@ const StatisticsSection1 = () => {
           onClick={handleScroll}
           aria-label="Continue Reading"
           className="
-            p-2 rounded-full bg-red-600 hover:bg-red-700 transition-all duration-300
+            p-2 rounded-full bg-red-600 hover:bg-red-700 hover:scale-110 transition-all duration-300
           "
         >
           <svg

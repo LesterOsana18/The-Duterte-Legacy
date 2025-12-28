@@ -1,10 +1,19 @@
 const StatisticsSection3 = () => {
-  return (
-    <section className="min-h-screen bg-[#111] relative">
-      {/* Frosted glass effect with a blood-color gradient */}
-      <div className="absolute inset-0 bg-linear-to-b from-red-800 via-red-900 to-black opacity-80 z-0"></div>
+  const handleScroll = () => {
+    document
+      .getElementById("icc-section")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
+  return (
+    <section 
+      id="statistics-section-three"
+      className="min-h-screen bg-[#111] relative"
+    >
+      {/* Frosted glass effect with a blood-color gradient */}
+      <div className="absolute inset-0 bg-linear-to-b from-red-800 via-red-900 to-black opacity-80 z-0 pointer-events-none"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 text-center">
         {/* Section Header */}
         <h3 className="text-5xl text-white mb-16 font-bold tracking-wide uppercase">
           Who Were Killed
@@ -75,6 +84,33 @@ const StatisticsSection3 = () => {
             </p>
           </a>
         </div>
+      </div>
+
+      {/* Arrow Down Button */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
+        <button
+          onClick={handleScroll}
+          aria-label="Continue Reading"
+          className="
+            p-2 rounded-full bg-red-600 hover:bg-red-700 hover:scale-110 transition-all duration-300
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
       </div>
     </section>
   );
