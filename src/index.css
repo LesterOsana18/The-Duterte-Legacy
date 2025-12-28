@@ -17,6 +17,15 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully hidden */
+  }
+  to {
+    opacity: 1; /* Fade in to full visibility */
+  }
+}
+
 @keyframes slideFadeIn {
   0% {
     opacity: 0;                /* Initially invisible */
@@ -29,6 +38,10 @@
 }
 
 @layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 2s ease-out 1.5s forwards; /* Waits 1.5s before starting the fade-in */
+  }
+
   .animate-slide-fade-in {
     animation: slideFadeIn 1s ease-out forwards;
   }

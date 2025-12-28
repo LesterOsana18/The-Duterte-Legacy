@@ -26,16 +26,24 @@ const LandingSection = () => {
           </span>
         </h1>
 
-        <p className="mt-6 text-sm md:text-base text-gray-300 font-montserrat">
+        <p
+          className="
+            mt-6 text-sm md:text-base text-gray-300 font-montserrat 
+            opacity-0 animate-fade-in
+          "
+        >
           “If I make it to the presidential palace, I will do just what I did as mayor. 
-          You drug pushers, holdup men, and do-nothings, you better get out because I’ll kill you.”
+          You drug pushers, holdup men, and do-nothings, you better get out because <span className="text-red-600 font-bold"> I’ll kill you.</span>”
         </p>
 
         <button
           onClick={handleScroll}
-          className="mt-10 px-8 py-3 border border-white text-white
-                     rounded-full hover:bg-white hover:text-black
-                     transition"
+          className="
+            mt-10 px-8 py-3 border border-white text-white 
+            rounded-full transition-all duration-300 ease-out
+            hover:bg-white hover:text-black hover:scale-110 hover:tracking-wide hover:shadow-xl 
+            active:scale-95 animate-pulse
+          "
         >
           Read More
         </button>
