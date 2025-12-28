@@ -32,14 +32,15 @@ const BeforePresidency = () => {
           </p>
 
           <p className="text-gray-300 leading-relaxed mb-6">
-            In an interview with the BBC, Duterte openly admitted to having shot
-            three men while serving as mayor, reinforcing a long-standing image
+            In an interview with the BBC, Duterte 
+            <span className="text-red-600 font-semibold"> openly admitted to having shot three men </span> 
+            while serving as mayor, reinforcing a long-standing image
             of extrajudicial enforcement rather than rule of law.
           </p>
 
           <p className="text-gray-300 leading-relaxed">
             Human Rights Watch labeled him the
-            <span className="italic"> “death squad mayor,” </span>
+            <span className="text-red-600 font-semibold"> “death squad mayor,” </span>
             estimating that more than 1,000 people were killed in Davao City
             without legal process during his tenure—an early warning of the
             violence that would later scale nationwide.
