@@ -1,6 +1,7 @@
 const StatisticsSection2 = () => {
   return (
-    <section 
+    <section
+      id="statistics-section-two"
       className="min-h-screen bg-cover bg-center flex items-center relative"
       style={{ backgroundImage: "url('/images/scene-three.png')" }}
     >
