@@ -15,9 +15,13 @@ const LandingSection = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl px-6 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white font-oswald">
+        <h1
+          className="text-4xl md:text-6xl font-bold text-white font-oswald leading-tight animate-slide-fade-in"
+        >
           A Presidency of Graves:
-          <span className="block font-normal mt-4 font-oswald">
+          <span
+            className="block font-normal mt-2 opacity-0 animate-slide-fade-in-delay leading-tight"
+          >
             The Violent Legacy of Rodrigo Duterte
           </span>
         </h1>

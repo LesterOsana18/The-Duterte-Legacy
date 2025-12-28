@@ -16,3 +16,25 @@
     font-family: var(--font-montserrat);
   }
 }
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;                /* Initially invisible */
+    transform: translateY(10px);  /* Slightly pushed down */
+  }
+  100% {
+    opacity: 1;                /* Fully visible */
+    transform: translateY(0);     /* In its original position */
+  }
+}
+
+@layer utilities {
+  .animate-slide-fade-in {
+    animation: slideFadeIn 1s ease-out forwards;
+  }
+
+  .animate-slide-fade-in-delay {
+    animation: slideFadeIn 1s ease-out 0.5s forwards; /* Adds a 0.5s delay */
+    opacity: 0; /* Ensures hidden until delay starts */
+  }
+}
