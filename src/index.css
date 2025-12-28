@@ -26,6 +26,15 @@
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1; /* Start fully visible */
+  }
+  to {
+    opacity: 0; /* Fade out to fully hidden */
+  }
+}
+
 @keyframes slideFadeIn {
   0% {
     opacity: 0;                /* Initially invisible */
@@ -34,6 +43,15 @@
   100% {
     opacity: 1;                /* Fully visible */
     transform: translateY(0);     /* In its original position */
+  }
+}
+
+@keyframes fadeOutRing {
+  0% {
+    border-opacity: 1;
+  }
+  100% {
+    border-opacity: 0;
   }
 }
 
@@ -50,6 +68,14 @@
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 2s ease-out 1.5s forwards; /* Waits 1.5s before starting the fade-in */
+  }
+
+  .animate-fade-out {
+    animation: fadeOut 2s ease-out 1.5s forwards; /* Waits 1.5s before starting the fade-out */
+  }
+
+  .animate-card-fade-in {
+    animation: fadeIn 2s ease-out 0s forwards; /* Waits 0s before starting the fade-in */
   }
 
   .animate-button-fade-in {
