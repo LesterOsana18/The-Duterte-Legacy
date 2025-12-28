@@ -46,15 +46,6 @@
   }
 }
 
-@keyframes fadeOutRing {
-  0% {
-    border-opacity: 1;
-  }
-  100% {
-    border-opacity: 0;
-  }
-}
-
 @keyframes backgroundZoom {
   from {
     background-size: 110%; /* Start zoomed-in */
@@ -62,6 +53,28 @@
 
   to {
     background-size: 100%; /* Settle to the original size */
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -93,5 +106,13 @@
 
   .animate-background-zoom {
     animation: backgroundZoom 15s ease-out forwards; /* 15s zoom effect */
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 1s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 1s ease-out forwards;
   }
 }
