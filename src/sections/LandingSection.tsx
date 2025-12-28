@@ -7,7 +7,10 @@ const LandingSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+      className="
+        relative min-h-screen flex items-center justify-center 
+        bg-cover bg-center animate-background-zoom
+      "
       style={{ backgroundImage: "url('/images/cover.png')" }}
     >
       {/* Dark overlay */}

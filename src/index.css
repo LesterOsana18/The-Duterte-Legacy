@@ -37,17 +37,31 @@
   }
 }
 
+@keyframes backgroundZoom {
+  from {
+    background-size: 110%; /* Start zoomed-in */
+  }
+
+  to {
+    background-size: 100%; /* Settle to the original size */
+  }
+}
+
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 2s ease-out 1.5s forwards; /* Waits 1.5s before starting the fade-in */
   }
 
   .animate-slide-fade-in {
-    animation: slideFadeIn 1s ease-out forwards;
+    animation: slideFadeIn 2s ease-out forwards;
   }
 
   .animate-slide-fade-in-delay {
-    animation: slideFadeIn 1s ease-out 0.5s forwards; /* Adds a 0.5s delay */
+    animation: slideFadeIn 2s ease-out 0.5s forwards; /* Adds a 0.5s delay */
     opacity: 0; /* Ensures hidden until delay starts */
+  }
+
+  .animate-background-zoom {
+    animation: backgroundZoom 15s ease-out forwards; /* 15s zoom effect */
   }
 }
