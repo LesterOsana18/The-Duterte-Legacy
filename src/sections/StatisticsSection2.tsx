@@ -1,35 +1,149 @@
+import { useState } from "react";
+
+// Static slide data
+const slides = [
+  {
+    title: "The Most Infamous Case During Duterte's War on Drugs",
+    content:
+      "This case became a turning point, exposing the deadly realities of the War on Drugs. Conflicts between official accounts and forensic evidence revealed state violence, with Kian’s death standing as a symbol of injustice and the failure to protect the innocent.",
+  },
+  {
+    title: "Who Was Kian Delos Santos?",
+    content:
+      "Kian delos Santos was a 17-year-old Grade 11 student from Caloocan City, Metro Manila, Philippines.",
+    image: "/images/kian-1.png",
+  },
+  {
+    title: "What Happened?",
+    content:
+      "Although he wasn't the intended target, he was killed during a police operation. He was shot point-blank despite footage showing him pleading for his life.",
+    image: "/images/kian-2.png",
+  },
+  {
+    title: "When Did It Happen?",
+    content:
+      "Kian's tragic death occurred on August 16, 2017. His killing sparked national outrage and highlighted the brutal realities of the war on drugs.",
+    image: "/images/kian-3.png",
+  },
+  {
+    title: "Where Did It Happen?",
+    content:
+      "The incident took place in a dark alley near his home. His death became a symbol of the widespread violence and human rights abuses during that era.",
+    image: "/images/kian-4.png",
+  },
+  {
+    title: "Why Is Kian's Case Significant?",
+    content:
+      "Kian’s death was a critical turning point that exposed the public to the devastating consequences of the War on Drugs. The killing of an innocent student ignited nationwide condemnation of the administration's campaign.",
+  },
+];
+
 const StatisticsSection2 = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const nextSlide = () => {
+    setActiveSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <section
       id="statistics-section-two"
-      className="min-h-screen bg-cover bg-center flex items-center relative"
+      className="relative min-h-screen flex items-center justify-center text-white bg-cover bg-center"
       style={{ backgroundImage: "url('/images/scene-three.png')" }}
     >
-      {/* Frosted glass effect with blur */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
 
-      <div className="relative max-w-5xl mx-auto grid grid-cols-2 gap-4 text-center bg-black/70 px-8 py-12 rounded-lg items-center hover:scale-105 transition-all shadow-lg shadow-black">        {/* Left: Government Figures + Divider */}
-        <div className="flex flex-col justify-center items-center border-r border-red-700 pr-8">
-          <h4 className="uppercase text-gray-400 mb-2">
-            Government Figures
-          </h4>
-          <p className="text-5xl font-bold text-white">6,252</p>
-          <p className="text-gray-400 mt-2">
-            deaths during police operations
-          </p>
+      {/* Content Card */}
+      <div className="relative max-w-5xl w-full px-12 py-14 rounded-xl bg-black/80 shadow-lg shadow-black">
+        <h2 className="text-3xl font-bold mb-10 text-red-600 text-center">
+          Remembering Kian Delos Santos
+        </h2>
+
+        {/* Slider */}
+        <div className="flex items-center justify-between">
+          {/* Prev Button */}
+          <button
+            onClick={prevSlide}
+            aria-label="Previous Slide"
+            className="p-3 rounded-full bg-gray-700 hover:bg-gray-600 hover:scale-115 transition-transform focus:outline-none"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Slide Content */}
+          <div
+            key={activeSlide}
+            className="w-3/4 mx-auto text-center animate-card-fade-in"
+          >
+            {/* Image or Placeholder */}
+            {slides[activeSlide].image ? (
+              <div className="mb-6 h-72 flex items-center justify-center">
+                <img
+                  src={slides[activeSlide].image}
+                  alt={slides[activeSlide].title}
+                  className="max-h-72 w-auto rounded-md border border-white/10 shadow-lg"
+                />
+              </div>
+            ) : (
+              <div className="mb-6 w-full">
+                <div className="h-0.5 bg-gray-700 w-full" />
+              </div>
+            )}
+
+            {/* Title and Content */}
+            <h3 className="text-2xl font-bold">{slides[activeSlide].title}</h3>
+            <p className="mt-4 text-gray-300 leading-relaxed">
+              {slides[activeSlide].content}
+            </p>
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={nextSlide}
+            aria-label="Next Slide"
+            className="p-3 rounded-full bg-gray-700 hover:bg-gray-600 hover:scale-115 transition-transform focus:outline-none"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
 
-        {/* Right: Independent Estimates */}
-        <div className="flex flex-col justify-center items-center pl-8">
-          <h4 className="uppercase text-gray-400 mb-2">
-            Independent Estimates
-          </h4>
-          <p className="text-5xl font-bold text-red-600">
-            27,000–30,000
-          </p>
-          <p className="text-gray-400 mt-2">
-            suspected extrajudicial killings
-          </p>
+        {/* Pagination */}
+        <div className="flex justify-center mt-8 space-x-3">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={`rounded-full transition-all duration-300 ${
+                index === activeSlide
+                  ? "w-4 h-4 bg-red-600 scale-125"
+                  : "w-3 h-3 bg-gray-500 hover:bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
