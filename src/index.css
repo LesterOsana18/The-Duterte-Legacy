@@ -52,6 +52,10 @@
     animation: fadeIn 2s ease-out 1.5s forwards; /* Waits 1.5s before starting the fade-in */
   }
 
+  .animate-button-fade-in {
+    animation: fadeIn 2s ease-out 2s forwards; /* Waits 2s before starting the fade-in */
+  }
+
   .animate-slide-fade-in {
     animation: slideFadeIn 2s ease-out forwards;
   }

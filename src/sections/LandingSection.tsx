@@ -25,7 +25,7 @@ const LandingSection = () => {
           <span
             className="block font-normal mt-2 opacity-0 animate-slide-fade-in-delay leading-tight"
           >
-            The Violent Legacy of Rodrigo Duterte
+            The <span className="text-red-600">Violent</span> Legacy of Rodrigo Duterte
           </span>
         </h1>
 
@@ -44,8 +44,8 @@ const LandingSection = () => {
           className="
             mt-10 px-8 py-3 border border-white text-white 
             rounded-full transition-all duration-300 ease-out
-            hover:bg-white hover:text-black hover:scale-110 hover:tracking-wide hover:shadow-xl 
-            active:scale-95 animate-pulse
+            hover:bg-white hover:text-black hover:scale-110 hover:tracking-wide hover:shadow-xl hover:cursor-pointer
+            active:scale-95 opacity-0 animate-button-fade-in
           "
         >
           Read More

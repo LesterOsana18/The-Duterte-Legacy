@@ -1,4 +1,10 @@
 const BeforePresidency = () => {
+  const handleScroll = () => {
+    document
+      .getElementById("statistics-section-one")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section
       id="before-presidency"
@@ -69,6 +75,22 @@ const BeforePresidency = () => {
               className="text-xs text-gray-500 hover:underline transition"
             >
               BBC Interview
+            </a>
+          </div>
+
+          {/* Continue Reading Button */}
+          <div 
+            onClick={handleScroll}
+            className="mt-6"
+          >
+            <a
+              className="
+                inline-block px-4 py-2 text-xs text-white bg-red-600 
+                rounded-full hover:text-red-600 hover:bg-white transition-all duration-300
+                border border-transparent hover:border-red-600 cursor-pointer
+              "
+            >
+              Continue Reading
             </a>
           </div>
         </div>
