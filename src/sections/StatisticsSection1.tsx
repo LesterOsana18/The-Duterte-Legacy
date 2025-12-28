@@ -1,8 +1,8 @@
 const StatisticsSection1 = () => {
   return (
-    <section className="min-h-screen bg-[#111] grid md:grid-cols-2">
+    <section className="min-h-screen bg-[#111] w-full grid grid-cols-1 md:grid-cols-2">
       {/* Left: Text Content */}
-      <div className="flex flex-col justify-center px-6 md:px-12 max-w-175 mx-auto">
+      <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 max-w-lg mx-auto">
         <h2 className="text-5xl mb-4 text-white">
           The War on Drugs
         </h2>
@@ -23,7 +23,7 @@ const StatisticsSection1 = () => {
       </div>
 
       {/* Right: Image */}
-      <div className="relative">
+      <div className="relative w-full h-full">
         <img
           src="/images/scene-two.png"
           alt="Police night operation"
