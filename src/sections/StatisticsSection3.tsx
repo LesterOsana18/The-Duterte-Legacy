@@ -13,7 +13,7 @@ const StatisticsSection3: React.FC = () => {
       className="min-h-screen bg-[#111] relative"
     >
       {/* Frosted glass effect with a blood-color gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-red-800 via-red-900 to-black opacity-80 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-red-800 via-red-900 to-black opacity-80 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 text-center">
         {/* Section Header */}
@@ -87,11 +87,7 @@ const StatisticsSection3: React.FC = () => {
           </a>
         </div>
       </div>
-
-      {/* Arrow Button with Fixed Z-Index */}
-      <div className="relative z-30">
-        <ArrowButton handleScroll={handleScroll} />
-      </div>
+      <ArrowButton handleScroll={handleScroll} />
     </section>
   );
 };
