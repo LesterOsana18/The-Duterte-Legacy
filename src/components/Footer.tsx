@@ -6,13 +6,13 @@ const Footer = () => {
     >
       {/* Main Footer Grid */}
       <div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-4 md:px-6"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 md:gap-12 px-4 md:px-6"
         aria-label="Footer Main Content"
       >
         {/* Column 1: About */}
         <div>
           <h3 className="text-lg font-bold text-white mb-4">About the Site</h3>
-          <p className="text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed max-w-sm">
             A platform built to remember a dark period in Philippine history.
             This site was created to raise awareness, call for justice, and give
             voice to those who suffered in silence during Duterte's administration.
