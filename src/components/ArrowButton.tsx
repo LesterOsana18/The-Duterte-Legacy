@@ -6,7 +6,7 @@ interface ArrowButtonProps {
 
 const ArrowButton: React.FC<ArrowButtonProps> = ({ handleScroll }) => {
   return (
-    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50">
       <button
         onClick={handleScroll}
         aria-label="Continue Reading"
