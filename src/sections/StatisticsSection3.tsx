@@ -1,4 +1,6 @@
-const StatisticsSection3 = () => {
+import ArrowButton from "../components/ArrowButton";
+
+const StatisticsSection3: React.FC = () => {
   const handleScroll = () => {
     document
       .getElementById("icc-section")
@@ -11,7 +13,7 @@ const StatisticsSection3 = () => {
       className="min-h-screen bg-[#111] relative"
     >
       {/* Frosted glass effect with a blood-color gradient */}
-      <div className="absolute inset-0 bg-linear-to-b from-red-800 via-red-900 to-black opacity-80 z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-red-800 via-red-900 to-black opacity-80 pointer-events-none"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 text-center">
         {/* Section Header */}
@@ -20,8 +22,8 @@ const StatisticsSection3 = () => {
         </h3>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-18">
-          {/* Card 1: Urban Poor */}
+        <div className="grid md:grid-cols-3 gap-10">
+          {/* Card 1 */}
           <a
             href="https://www.amnesty.org/en/latest/news/2017/02/war-on-drugs-war-on-poor/"
             target="_blank"
@@ -42,7 +44,7 @@ const StatisticsSection3 = () => {
             </p>
           </a>
 
-          {/* Card 2: Night Raids */}
+          {/* Card 2 */}
           <a
             href="https://www.hrw.org/news/2017/03/02/killing-squads-inside-philippines-war-drugs"
             target="_blank"
@@ -63,7 +65,7 @@ const StatisticsSection3 = () => {
             </p>
           </a>
 
-          {/* Card 3: Families Left Behind */}
+          {/* Card 3 */}
           <a
             href="https://www.hrw.org/report/2020/05/27/our-happy-family-gone/impact-war-drugs-children-philippines"
             target="_blank"
@@ -86,31 +88,9 @@ const StatisticsSection3 = () => {
         </div>
       </div>
 
-      {/* Arrow Down Button */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
-        <button
-          onClick={handleScroll}
-          aria-label="Continue Reading"
-          className="
-            p-2 rounded-full bg-red-600 hover:bg-red-700 hover:scale-110 transition-all duration-300
-          "
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </button>
+      {/* Arrow Button with Fixed Z-Index */}
+      <div className="relative z-30">
+        <ArrowButton handleScroll={handleScroll} />
       </div>
     </section>
   );
