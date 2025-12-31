@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { iccCase } from "../data/iccCase";
 import ArrowButton from "../components/ArrowButton";
 
-const ICCSection: React.FC = () => {
+const ICCSection = () => {
   const handleScroll = () => {
     document
       .getElementById("call-to-action-section")

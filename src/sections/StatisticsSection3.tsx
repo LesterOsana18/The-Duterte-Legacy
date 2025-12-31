@@ -1,6 +1,6 @@
 import ArrowButton from "../components/ArrowButton";
 
-const StatisticsSection3: React.FC = () => {
+const StatisticsSection3 = () => {
   const handleScroll = () => {
     document
       .getElementById("icc-section")

@@ -39,12 +39,13 @@ const slides = [
   },
 ];
 
-const StatisticsSection2: React.FC = () => {
+const StatisticsSection2 = () => {
   const handleScroll = () => {
     document
       .getElementById("statistics-section-three")
       ?.scrollIntoView({ behavior: "smooth" });
   };
+
   const [activeSlide, setActiveSlide] = useState(0);
 
   const nextSlide = () => {
