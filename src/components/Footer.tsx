@@ -1,15 +1,18 @@
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 pt-8 md:pt-12 pb-0 border-t border-gray-700">
+    <footer
+      className="bg-black text-gray-400 pt-8 md:pt-12 pb-0 border-t border-gray-700"
+      role="contentinfo"
+    >
       {/* Main Footer Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-8 md:gap-12 px-4 md:px-6">
-        
+      <div
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-4 md:px-6"
+        aria-label="Footer Main Content"
+      >
         {/* Column 1: About */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">
-            About the Site
-          </h3>
-          <p className="text-sm leading-relaxed max-w-sm">
+          <h3 className="text-lg font-bold text-white mb-4">About the Site</h3>
+          <p className="text-sm leading-relaxed">
             A platform built to remember a dark period in Philippine history.
             This site was created to raise awareness, call for justice, and give
             voice to those who suffered in silence during Duterte's administration.
@@ -18,10 +21,11 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">
-            Quick Links
-          </h3>
-          <ul className="text-sm space-y-3">
+          <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
+          <ul
+            className="text-sm space-y-3"
+            aria-label="Quick Navigation Links"
+          >
             <li>
               <a
                 href="#statistics-section-one"
@@ -63,10 +67,11 @@ const Footer = () => {
 
         {/* Column 3: Credits */}
         <div>
-          <h3 className="text-lg font-bold text-white mb-4">
-            Credits
-          </h3>
-          <ul className="text-sm space-y-3">
+          <h3 className="text-lg font-bold text-white mb-4">Credits</h3>
+          <ul
+            className="text-sm space-y-3"
+            aria-label="References and Credits"
+          >
             <li>
               <a
                 href="https://www.pbs.org/wgbh/frontline/article/fighting-for-compassion-in-the-philippines-brutal-drug-war/"
@@ -132,7 +137,10 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 md:mt-12 mb-0 text-center text-sm text-gray-600 border-t border-gray-700 pt-4 md:pt-6 pb-4 md:pb-6 px-4 md:px-6">
+      <div
+        className="mt-10 md:mt-12 mb-0 text-center text-sm text-gray-600 border-t border-gray-700 pt-4 md:pt-6 pb-4 md:pb-6 px-4 md:px-6"
+        aria-label="Footer Disclaimer"
+      >
         <p>
           This site is for educational purposes only. All information presented
           is publicly available.
