@@ -13,17 +13,15 @@ const LandingSection = () => {
       "
       style={{ backgroundImage: "url('/images/cover.png')" }}
     >
-      {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl px-6 text-center">
+      <div className="relative z-10 max-w-4xl px-4 sm:px-6 text-center">
         <h1
-          className="text-4xl md:text-6xl font-bold text-white font-oswald leading-tight animate-slide-fade-in"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-white font-oswald leading-tight animate-slide-fade-in"
         >
           A Presidency of Graves:
           <span
-            className="block font-normal mt-2 opacity-0 animate-slide-fade-in-delay leading-tight"
+            className="block font-normal mt-2 opacity-0 animate-slide-fade-in-delay"
           >
             The <span className="text-red-600">Violent</span> Legacy of Rodrigo Duterte
           </span>
@@ -31,8 +29,8 @@ const LandingSection = () => {
 
         <p
           className="
-            mt-6 text-sm md:text-base text-gray-300 font-montserrat 
-            opacity-0 animate-fade-in
+            mt-4 sm:mt-6 text-xs sm:text-sm md:text-base text-gray-300 font-montserrat 
+            leading-relaxed opacity-0 animate-fade-in
           "
         >
           “If I make it to the presidential palace, I will do just what I did as mayor. 
@@ -42,7 +40,9 @@ const LandingSection = () => {
         <button
           onClick={handleScroll}
           className="
-            mt-10 px-8 py-3 border border-white text-white 
+            mt-8 sm:mt-10 px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 
+            text-sm sm:text-base
+            border border-white text-white 
             rounded-full transition-all duration-300 ease-out
             hover:bg-white hover:text-black hover:scale-110 hover:tracking-wide hover:shadow-xl hover:cursor-pointer
             active:scale-95 opacity-0 animate-button-fade-in
@@ -56,7 +56,7 @@ const LandingSection = () => {
         href="https://www.hrw.org/news/2017/09/07/philippine-president-rodrigo-dutertes-war-drugs#:~:text=%E2%80%9CIf%20I%20make%20it%20to%20the%20presidential%20palace%2C%E2%80%9D%20he%20said%2C%20%E2%80%9CI%20will%20do%20just%20what%20I%20did%20as%20mayor.%20You%20drug%20pushers%2C%20holdup%20men%2C%20and%20do%2Dnothings%2C%20you%20better%20get%20out%20because%20I%E2%80%99ll%20kill%20you.%E2%80%9D"
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute mb-4 mr-4 bottom-4 right-4 text-xs md:text-sm text-gray-500 font-montserrat hover:underline transition"
+        className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 text-[10px] sm:text-xs md:text-sm text-gray-500 font-montserrat hover:underline transition"
         style={{ zIndex: 20 }}
       >
         Human Rights Watch
