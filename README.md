@@ -9,4 +9,4 @@ This site presents factual statistics, historical context, and a clear call to a
 ---
 
 ## 🔗 Published Site
-View the live project here: **[The Duterte Legacy](https://the-duterte-legacy.netlify.app/)**.
+View the live project here: **[A Presidency of Graves](https://a-presidency-of-graves.netlify.app/)**.
